@@ -32,18 +32,8 @@ export default class Cursor {
         for (let key in this.renderStyles) {
             this.renderStyles[key].previous = lerp(this.renderStyles[key].previous, this.renderStyles[key].current, this.renderStyles[key].amt);
         }
-
-        // this.DOM.el.style.transform = `translateX(${(this.renderStyles['tx'].previous)}px) translateY(${this.renderStyles['ty'].previous}px)`;
         this.DOM.el.style.transform = `translateX(${this.renderStyles.tx.previous}px) translateY(${this.renderStyles.ty.previous}px)`
         requestAnimationFrame(() => this.render());
     }
 
-    // render() {
-
-
-    //     for (let key in this.renderStyles) {
-    //     }
-
-    //     requestAnimationFrame(() => this.render())
-    // }
 }
