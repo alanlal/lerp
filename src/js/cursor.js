@@ -5,6 +5,7 @@ import { lerp, getMousePos } from './utils';
 let mouse = { x: 0, y: 0 };
 window.addEventListener('mousemove', ev => mouse = getMousePos(ev));
 
+
 export default class Cursor {
     constructor(el) {
         this.DOM = { el: el };
@@ -18,7 +19,7 @@ export default class Cursor {
         };
 
         this.onMouseMoveEv = () => {
-            gsap.to(this.DOM.el, { duration: 0.9, ease: 'Power3.easeOut', opacity: 1 });
+            gsap.to(this.DOM.el, { duration: 0.9, ease: 'Power3.easeOut', opacity: 1 })
             requestAnimationFrame(() => this.render());
             window.removeEventListener('mousemove', this.onMouseMoveEv);
         };

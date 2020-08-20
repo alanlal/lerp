@@ -3,6 +3,33 @@ body {
   background: #181a1b;
 }
 
+* {
+  cursor: none;
+}
+
 .cursor {
   stroke: white;
+}
+
+.box-container {
+  position: fixed;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.image_box {
+  display: block;
+  width: 40vw;
+  min-height: 120px;
+  border-radius: 8px;
+  margin: 16px;
 }
