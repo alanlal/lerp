@@ -2,6 +2,7 @@ body {
   margin: 0;
   background: #181a1b;
   overflow-x: hidden;
+  padding-top: 48px;
 }
 
 * {
